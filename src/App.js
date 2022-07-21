@@ -1,10 +1,11 @@
+import Ships from "./components/ships/Ships";
 
 function App() {
-  return (
-    <div>
-text
-    </div>
-  );
+    return (
+        <div>
+            <Ships/>
+        </div>
+    );
 }
 
 export default App;
