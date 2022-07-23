@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 
-import {ApiService} from "../service/api.service";
+import ApiService from "../service/api.service";
 import Album from "../components/Album";
 
 export default function Albums () {
@@ -10,7 +10,6 @@ export default function Albums () {
     useEffect(()=> {
         apiService.getAll().then(value => setAlbums([...value]))
     }, [])
-
 
     return (
       <div>

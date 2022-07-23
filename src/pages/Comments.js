@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react";
 import {Outlet} from "react-router-dom";
 
-import {ApiService} from "../service/api.service";
+import ApiService from "../service/api.service";
 import Comment from "../components/Comment";
 
 export default function Comments () {
@@ -15,8 +15,8 @@ export default function Comments () {
     return (
       <div>
           <Outlet/>
+          <br/>
           {comments.map(comment=> <Comment key={comment.id} comment={comment}/>)}
-
       </div>
     );
 }

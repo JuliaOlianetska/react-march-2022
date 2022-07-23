@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 
-import {ApiService} from "../service/api.service";
+import ApiService from "../service/api.service";
 import Todo from "../components/Todo";
 
 export default function Todos () {
@@ -10,7 +10,6 @@ export default function Todos () {
     useEffect(()=> {
 apiService.getAll().then(value => setTodos([...value]))
     }, [])
-
 
     return (
       <div>
