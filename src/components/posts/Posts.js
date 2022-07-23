@@ -9,13 +9,11 @@ class Posts extends Component {
 
     constructor(props, context) {
         super(props, context);
-
     }
 
     componentDidMount() {
         this.apiService = new ApiService();
-        this.apiService.getPosts().
-        then(value => this.setState({posts:value}));
+        this.apiService.getPosts().then(value => this.setState({posts: value}));
     }
 
     render() {

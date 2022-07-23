@@ -7,7 +7,6 @@ class Comment extends Component {
         this.comment = this.props.comment;
     }
 
-
     render() {
         return (
             <div>

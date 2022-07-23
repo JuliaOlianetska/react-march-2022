@@ -6,20 +6,19 @@ import Comments from "./components/comments/Comments";
 
 class App extends Component {
 
-constructor(props) {
-    super();
-}
-
+    constructor(props) {
+        super();
+    }
 
     render() {
         return (
             <div>
                 <div>
+                    <h2>MENU:</h2>
                     <Link to={'/posts'}>POSTS</Link>
                     <br/>
                     <Link to={'/comments'}>COMMENTS</Link>
                 </div>
-
                 <div>
                     <Routes>
                         <Route path={'/posts'} element={<Posts/>}/>
