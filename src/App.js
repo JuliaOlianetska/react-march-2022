@@ -1,10 +1,23 @@
+import React, {Component} from "react";
 
-function App() {
-  return (
-    <div>
-text
-    </div>
-  );
+import Posts from "./components/posts/Posts";
+import Comments from "./components/comments/Comments";
+
+class App extends Component {
+
+constructor(props) {
+    super();
+}
+
+
+    render() {
+        return (
+            <div>
+                <Posts/>
+                <Comments/>
+            </div>
+        );
+    }
 }
 
 export default App;
