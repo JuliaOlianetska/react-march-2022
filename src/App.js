@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Link, Routes, Route} from "react-router-dom";
 
 import Posts from "./components/posts/Posts";
 import Comments from "./components/comments/Comments";
@@ -13,8 +14,18 @@ constructor(props) {
     render() {
         return (
             <div>
-                <Posts/>
-                <Comments/>
+                <div>
+                    <Link to={'/posts'}>POSTS</Link>
+                    <br/>
+                    <Link to={'/comments'}>COMMENTS</Link>
+                </div>
+
+                <div>
+                    <Routes>
+                        <Route path={'/posts'} element={<Posts/>}/>
+                        <Route path={'/comments'} element={<Comments/>}/>
+                    </Routes>
+                </div>
             </div>
         );
     }
